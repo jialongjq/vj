@@ -1,0 +1,87 @@
+TILEMAP
+16 11 							-- Size of tile map in tiles
+48 48 							-- Tile size & block size
+images/blocks.png 	-- Tilesheet
+6 6 								-- Number of tiles in tilesheet
+0000000000000000
+0              0
+0  333    333  0
+0              0
+01    1  1    10
+0  3 3    3 3  0
+0              0
+01    1  1    10
+0  3 3    3 3  0
+0              0
+0515051111505150
+
+BACKGROUNDMAP
+16 11 							-- Size of tile map in tiles
+48 48 							-- Tile size & block size
+images/blocks.png 	-- Tilesheet
+6 6								-- Number of tiles in tilesheet
+7MMMMMMIOMMMMMM8
+BUUUUUU9AUUUUUUB
+BUUUUUU9AUUUUUUB
+BUUUCUU9AUUCUUUB
+BUUUBUU9AUUBUUUB
+BUUUBUU9AUUBUUUB
+BUUUBUU9AUUBUUUB
+BUUUBUULNUUBUUUB
+BUUUBUUUUUUBUUUB
+BUUUBUUUUUUBUUUB
+VUWUVURSSTUVUWUV
+
+COLLISIONMAP
+32 22 
+24 
+11444444444444444444444444444411
+11            1111            11
+11            1111            11
+11            1111            11
+11            1111            11
+11    221122  1111  221122    11
+11      11    1111    11      11
+11      11    1111    11      11
+1122    11  22111122  11    2211
+11      11    1111    11      11
+11      11    1111    11      11
+11    221122  1111  221122    11
+11      11    1111    11      11
+11      11    1111    11      11
+1122    11  22444422  11    2211
+11      11            11      11
+11      11            11      11
+11    221122        221122    11
+11      11            11      11
+11      11            11      11
+11  11  11  11111111  11  11  11
+11331133113311111111331133113311	
+
+PLAYER
+2 9	
+
+DOOR
+7.5 9	
+
+KEY
+2 9		
+
+GEM
+4 1.5	
+
+SHIELD
+13 9	
+
+SKELETON
+2	
+4 1.5 R	
+11 1.5 L		
+
+GHOST
+1	
+7.5 7.75 L	
+	
+END
+
+Author: Jia Long Ji Qiu

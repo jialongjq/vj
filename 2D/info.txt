@@ -1,0 +1,105 @@
+Videojocs 22/23 Q2 - Exercici 2D:
+
+Nom i cognoms dels integrants del grup
+-------------------------------------
+
+Jia Long Ji Qiu 
+
+You Wu
+
+
+
+Funcionalitats implementades
+----------------------------
+
+MENÚ PRINCIPAL:
+
+- Menú de selecció per escollir inicialitzar el joc, veure instruccions o crédits.
+
+
+PANTALLA INSTRUCCIONS:
+
+- Pantalla que introdueix una explicació general i les instruccions del joc.
+
+
+
+PANTALLA CREDITS:
+
+- Pantalla que mostra els credits del videojoc.
+
+
+PANTALLA ESCENA (NIVELL):
+
+- El joc està format per tres nivells, on el primer nivell correspon al nivell 28 del joc de Night Knight.
+
+- El personatge té inicialment 3 vides. Quan perd una vida, representa que ha sigut congelat i tornarà al punt inicial definit al nivell (respawn), amb uns quants segons d'invencibilitat.
+
+- El nivel comença amb 60 segons.
+
+- El personatge pot recollir els col·leccionables: joia, escut o rellotge. Apareixen amb un 5% de probabilitat amb cada segon que passa (la probabilitat no s'acumula):
+
+  -> En el cas de col·leccionar amb la joia, per cada joia col·leccionat, el personatge aconsegueix punts determinat depenent del color que té la joia.
+
+  -> En el cas de col·leccionar amb l'escut, el personatge pot evitar pèrdua d'una vida quan es col·lisona amb l'enemic o bé passa per sobre de les punxes y es perd l'escut automàticament. L'escut no es manté entre nivells diferents.
+
+  -> En el cas de col·leccionar amb el rellotge, els enemics del nivell i el temps es quedarà paralitzat durant quatre segons.
+
+- El personatge perd una vida quan:
+	- El temps del nivell s'acaba (el temps es reinicia a 60 segons). La invencibilitat i l'escut no s'apliquen quan el personatge perd una vida degut al temps.
+	- Col·lisiona amb un enemic
+	- Trepitja puntxes
+
+- Hi ha 3 tipus d'enemics:
+
+  -> Skeleton. El seu moviment és constant i es mou de dreta a esquerra i d'esquerra a dreta sobre de les rajoles connectades respecte a la rajola on es posiciona inicialment, comença amb una orientació predeterminada (cap a esquerra/dreta) i es mou a l'orientació dedicada, en el cas que col·lideix amb la paret o el personatge, o bé es troba a un de l'extrem del conjunt de les rajoles es mourà cap a l'orientació contrària. 
+    
+  -> Vampire. Té dos comportaments: com a vampir i com a ratpenat. El moviment de vampir es mou d'esquerra a dreta similar a Skeleton, i el moviment de ratpenat és volar per aire i quan es xoca amb la paret o amb la rajola canvia de direcció, quan es produeix una col·lisió per sobre o per sota canvia la direcció vertical per la contrària, és a dir, si es movia amb l'orientació dreta-superior ara es mourà cap a dreta-inferior contrària, similar quan es produeix col·lisió horitzontal. Aquest dos comportaments va alternant aproximadament cada 5 segons, que inicialment aquest es comporta com un vampir.  
+
+  -> Ghost. Persegueix el personatge constantment sempre i quan el personatge estigui viu. El fantasma té la capacitat de atravessar parets i es pot moure en 8 direccions (horitzontalment, verticalment i en diagonal).
+
+- Quan la vida del personatge arriba a zero ens apareix una pantalla de GAME OVER i al cap d'un temps tornarà al menú inicial.
+
+- Cada porta té una porta tancada i una clau. La clau apareixerà un cop s'activin totes les plataformes activables del nivell corresponent. Quan s'afagi la clau s'obrirà la porta.
+  El nivell es completa quan el personatge entra a la porta. El temps restant es suma a la puntuació total.
+
+- Quan el personatge entra a la porta es passa al següent nivell o bé es torna al menú principal en cas de ser l'últim nivell. En aquest últim cas apareixerà una pantalla de GAME COMPLETED i al cap d'un temps tornarà al menú principal.
+
+
+
+
+Instruccions del joc
+--------------------
+
+MENÚ 
+
+- Esc per finalitzar l'execució del joc
+
+- Fletxes de dalt i de baix per seleccionar el submenú al qual vulguem accedir
+
+- Space per confirmar el submenú seleccionat i accedir-hi
+
+
+SUBMENÚ INSTRUCCIONS
+
+- Esc per tornar al menú
+
+
+SUBMENÚ CRÈDITS
+- Esc per tornar al menú
+
+
+PANTALLES DEL JOC
+
+- Esc per tornar al menú
+
+- '1','2','3' per seleccionar nivell desitjat
+
+- 'B' per mostrar els hitbox de totes les entitats que hi ha el nivell
+
+- 'G' canviar invulnerabilitat del personatge
+
+- 'K' fer aparèixer la clau abans del temps
+
+- Fletxes d'esquerra i de dreta per moure
+
+- Fletxa de dalt per saltar
